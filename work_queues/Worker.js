@@ -12,6 +12,7 @@ amqp.connect("amqp://localhost", function (error, connection) {
             durable: true,
         });
 
+        channel.prefetch(1);
         console.log(
             " [*] Waiting for messages in %s. To exit press CTRL+C",
             queueName
@@ -27,7 +28,7 @@ amqp.connect("amqp://localhost", function (error, connection) {
                 }, seconds * 1000);
             },
             {
-                noAck: true,
+                noAck: false,
             }
         );
     });
