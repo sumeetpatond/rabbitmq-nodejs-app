@@ -48,6 +48,15 @@ amqp.connect("amqp://localhost", function (error, connection) {
         );
     });
 });
-// node .\LogConsumer.js warning error
-// node .\LogConsumer.js info warning error
-// node .\LogConsumer.js info warning
+
+// node .\LogConsumer.js "*.orange.*"
+// [*] Waiting for messages. To exit press CTRL+C
+// [x] 1
+// [x] 2
+// [x] 3
+
+// node .\LogConsumer.js  "*.*.rabbit" "lazy.#"
+// [*] Waiting for messages. To exit press CTRL+C
+// [x] 1
+// [x] 2
+// [x] 4

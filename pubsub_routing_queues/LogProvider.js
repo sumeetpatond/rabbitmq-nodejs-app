@@ -27,6 +27,7 @@ amqp.connect("amqp://localhost", function (error, connection) {
     });
 });
 
-//node .\LogProvider.js error log1
-//node .\LogProvider.js warning log2
-//node .\LogProvider.js info log3
+//node .\LogProvider.js quick.orange.rabbit 1
+//node .\LogProvider.js lazy.orange.elephant 2
+//node .\LogProvider.js quick.orange.fox 3
+//node .\LogProvider.js lazy.brown.fox 4
